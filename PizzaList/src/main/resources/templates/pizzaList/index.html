@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Pizza List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<link href="css/style.css" rel="stylesheet">
+  	<script src="js/script.js"></script> 
+  </head>
+  
+  <body>
+    <h1>Welcome to My Pizza Site!</h1>
+    <h3>Check out a few different pictures of pizza and enter some information to subscribe and receive daily updates!</h3>
+        
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image1"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image2"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image3"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image4"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image5"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image6"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image7"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image8"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="image image9"></div>
+      </div>
+    </div>
+    
+    <p>Please use the form below to indicate your pizza preference!</p>
+    <form action="#" th:action="@{/}" th:object="${pizzaList}" method="post">
+    	<table>
+			<tr>
+            	<td>Name</td>
+	    		<td><input type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+    	    	<td>Email Address</td>
+	    		<td><input type="text" th:field="*{email}" /></td>
+			</tr>
+			<tr>
+    	    	<td>Pizza Choice</td>
+	    		<td><input type="text" th:field="*{pizzaChoice}" /></td>
+			</tr>
+			<tr>
+	    		<td><button type="submit">Submit Your Choice!</button></td>
+			</tr>
+    	</table>
+	</form>
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
